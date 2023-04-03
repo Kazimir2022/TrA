@@ -11,17 +11,18 @@ class SecondViewController: UIViewController {
     
     @IBOutlet var dataTextField: UITextField!
     // изменяемое значение
-    var updatingData: String = ""
+    var updatingData: String = "" //label сцены 1
     override func viewDidLoad() {
         super.viewDidLoad()
 
        
     }
+        // перед появлением экрана вызываетсяся метод 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateTextFieldData(withText: updatingData)
     }
-    // обновляем данные в текстовом поле
+    // который обновляет текстфилд
     private func updateTextFieldData(withText text: String) {
         dataTextField.text = text
     }
