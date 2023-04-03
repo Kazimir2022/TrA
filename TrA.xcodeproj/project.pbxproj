@@ -13,6 +13,7 @@
 		FE7050F229DAD6850079F161 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE7050F029DAD6850079F161 /* Main.storyboard */; };
 		FE7050F429DAD6860079F161 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE7050F329DAD6860079F161 /* Assets.xcassets */; };
 		FE7050F729DAD6860079F161 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE7050F529DAD6860079F161 /* LaunchScreen.storyboard */; };
+		FE7050FF29DAE75F0079F161 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7050FE29DAE75F0079F161 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FE7050F329DAD6860079F161 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE7050F629DAD6860079F161 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE7050F829DAD6860079F161 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE7050FE29DAE75F0079F161 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				FE7050EA29DAD6850079F161 /* AppDelegate.swift */,
 				FE7050EC29DAD6850079F161 /* SceneDelegate.swift */,
+				FE7050FE29DAE75F0079F161 /* SecondViewController.swift */,
 				FE7050EE29DAD6850079F161 /* ViewController.swift */,
 				FE7050F029DAD6850079F161 /* Main.storyboard */,
 				FE7050F329DAD6860079F161 /* Assets.xcassets */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE7050FF29DAE75F0079F161 /* SecondViewController.swift in Sources */,
 				FE7050EF29DAD6850079F161 /* ViewController.swift in Sources */,
 				FE7050EB29DAD6850079F161 /* AppDelegate.swift in Sources */,
 				FE7050ED29DAD6850079F161 /* SceneDelegate.swift in Sources */,

@@ -4,13 +4,14 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Сцена А-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="TrA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,6 +22,15 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JlR-fJ-jow">
+                                <rect key="frame" x="60" y="480" width="266" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Изменить с помощью свойтва">
+                                    <color key="titleColor" systemColor="tertiarySystemBackgroundColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.94391936188811187" green="0.46000000000000002" blue="0.92021197552447542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -41,13 +51,13 @@
         <!--Сцена Б-->
         <scene sceneID="9QX-dw-OgM">
             <objects>
-                <viewController id="3Xa-tL-Isa" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="3Xa-tL-Isa" customClass="SecondViewController" customModule="TrA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xNP-h8-JY2">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hxw-2I-wtU">
-                                <rect key="frame" x="16" y="405" width="358" height="34"/>
+                                <rect key="frame" x="30" y="405" width="330" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -55,14 +65,16 @@
                         <viewLayoutGuide key="safeArea" id="aSY-fh-3bl"/>
                         <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="hxw-2I-wtU" firstAttribute="top" secondItem="aSY-fh-3bl" secondAttribute="top" constant="287" id="1Oc-T4-L2g"/>
-                            <constraint firstItem="hxw-2I-wtU" firstAttribute="centerX" secondItem="xNP-h8-JY2" secondAttribute="centerX" id="H4f-to-hnm"/>
+                            <constraint firstItem="hxw-2I-wtU" firstAttribute="centerX" secondItem="xNP-h8-JY2" secondAttribute="centerX" id="YnA-5i-mC0"/>
+                            <constraint firstItem="hxw-2I-wtU" firstAttribute="centerY" secondItem="xNP-h8-JY2" secondAttribute="centerY" id="bcl-F3-6m2"/>
                             <constraint firstItem="hxw-2I-wtU" firstAttribute="leading" secondItem="aSY-fh-3bl" secondAttribute="leading" constant="30" id="fp1-B1-qP4"/>
-                            <constraint firstItem="aSY-fh-3bl" firstAttribute="bottom" secondItem="hxw-2I-wtU" secondAttribute="bottom" constant="30" id="nps-HQ-Nw6"/>
                             <constraint firstItem="aSY-fh-3bl" firstAttribute="trailing" secondItem="hxw-2I-wtU" secondAttribute="trailing" constant="30" id="xyx-r6-8j9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Сцена Б" id="oCO-JI-bSD"/>
+                    <connections>
+                        <outlet property="dataTextField" destination="hxw-2I-wtU" id="90q-BB-kbF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8NV-wA-hli" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,4 +99,12 @@
             <point key="canvasLocation" x="24.615384615384613" y="-34.123222748815166"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
