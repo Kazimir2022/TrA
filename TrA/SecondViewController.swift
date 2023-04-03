@@ -17,11 +17,20 @@ class SecondViewController: UIViewController {
 
        
     }
-        // перед появлением экрана вызываетсяся метод 
+    
+        // перед появлением экрана вызываетсяся метод
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateTextFieldData(withText: updatingData)
     }
+    
+    @IBAction func saveDataWithProperty(_ sender: UIButton) {
+        self.navigationController?.viewControllers.forEach{ viewController in
+            (viewController as? ViewController)?.updatedData = dataTextField.text ?? ""
+        }
+    }
+    
+    
     // который обновляет текстфилд
     private func updateTextFieldData(withText text: String) {
         dataTextField.text = text

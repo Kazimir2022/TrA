@@ -8,11 +8,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var updatedData: String = "Test data"
     @IBOutlet var dataLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateLabel(withText: updatedData)
+    }
+    
+    // Обновляем данные в текстовой метке
+    private func updateLabel(withText text: String) {
+        dataLabel.text = updatedData
     }
 
     @IBAction func editDataWithDelegate(_ sender: UIButton) {
