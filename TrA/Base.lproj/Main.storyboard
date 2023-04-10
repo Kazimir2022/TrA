@@ -22,10 +22,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JlR-fJ-jow">
-                                <rect key="frame" x="60" y="480" width="266" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JlR-fJ-jow">
+                                <rect key="frame" x="30" y="470" width="330" height="35"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="QnJ-Ef-ydU"/>
+                                </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Изменить с помощью свойтва">
                                     <color key="titleColor" systemColor="tertiarySystemBackgroundColor"/>
@@ -34,12 +36,29 @@
                                     <action selector="editDataWithDelegate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aLX-Y3-3zD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGh-xb-fQk">
+                                <rect key="frame" x="71" y="535" width="248" height="34"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Изменить с помощью segue"/>
+                                <connections>
+                                    <segue destination="3Xa-tL-Isa" kind="show" identifier="toEditScreen" id="Zkd-ui-iy5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.94391936188811187" green="0.46000000000000002" blue="0.92021197552447542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="JlR-fJ-jow" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="3fJ-DU-53E"/>
                             <constraint firstItem="jbu-rC-N1K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FTY-4D-TYu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JlR-fJ-jow" secondAttribute="trailing" constant="30" id="FjW-il-HiX"/>
                             <constraint firstItem="jbu-rC-N1K" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Iep-Tg-aVH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UGh-xb-fQk" secondAttribute="bottom" constant="30" id="Z7n-EK-OG6"/>
+                            <constraint firstItem="JlR-fJ-jow" firstAttribute="top" secondItem="jbu-rC-N1K" secondAttribute="bottom" constant="30" id="enC-oW-Ugv"/>
+                            <constraint firstItem="UGh-xb-fQk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="hez-ya-ufZ"/>
+                            <constraint firstItem="UGh-xb-fQk" firstAttribute="top" secondItem="JlR-fJ-jow" secondAttribute="bottom" constant="30" id="jN8-Fn-YIG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UGh-xb-fQk" secondAttribute="trailing" constant="30" id="rT0-Io-VbW"/>
+                            <constraint firstItem="UGh-xb-fQk" firstAttribute="top" secondItem="JlR-fJ-jow" secondAttribute="bottom" constant="30" id="vmr-jZ-QKJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Сцена А" largeTitleDisplayMode="always" id="rAJ-pg-3F2"/>

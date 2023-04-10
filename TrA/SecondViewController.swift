@@ -11,7 +11,7 @@ class SecondViewController: UIViewController {
     
     @IBOutlet var dataTextField: UITextField!
     // изменяемое значение
-    var updatingData: String = "" //label сцены 1
+    var updatingData: String = "Test" //label сцены 1
     override func viewDidLoad() {
         super.viewDidLoad()
 

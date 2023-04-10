@@ -39,5 +39,30 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(editScreen, animated: true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // определяем идентификатор segue. При помощи свойства identifier
+        switch segue.identifier {
+        case "toEditScreen":
+            // обрабатываем переход(вызов метода).Отправляем источник перехода
+            prepareEditScreen(segue)
+        default:
+            break
+        }
+    }
+    
+    // подготовка к переходу на экран редактирования
+    private func prepareEditScreen(_ segue: UIStoryboardSegue) {
+        // безопасно извлекаем опциональное значение контроллера назначения путем преобразования
+        guard let destinationController = segue.destination as? SecondViewController else {
+            return // если не получилось то выходим из метода
+        }
+        // У контроллера назначения (тип SecondViewController) изменяем текстовое свойство
+        destinationController.updatingData = dataLabel.text ?? ""
+    }
+    
+    
+    
+    
+    
 }
 
