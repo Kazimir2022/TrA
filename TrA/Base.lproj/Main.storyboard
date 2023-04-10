@@ -33,11 +33,11 @@
                                     <color key="titleColor" systemColor="tertiarySystemBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="editDataWithDelegate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aLX-Y3-3zD"/>
+                                    <action selector="editDataWithProperty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pLl-9R-em2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGh-xb-fQk">
-                                <rect key="frame" x="71" y="535" width="248" height="34"/>
+                                <rect key="frame" x="30" y="535" width="330" height="34"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Изменить с помощью segue"/>
@@ -45,18 +45,29 @@
                                     <segue destination="3Xa-tL-Isa" kind="show" identifier="toEditScreen" id="Zkd-ui-iy5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wN-t2-WSz">
+                                <rect key="frame" x="30" y="599" width="330" height="34"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Изменить с помощью делегата"/>
+                                <connections>
+                                    <action selector="editDataWithDelegate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZFa-dd-9UE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.94391936188811187" green="0.46000000000000002" blue="0.92021197552447542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="JlR-fJ-jow" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="3fJ-DU-53E"/>
+                            <constraint firstItem="5wN-t2-WSz" firstAttribute="top" secondItem="UGh-xb-fQk" secondAttribute="bottom" constant="30" id="B4h-0M-ulj"/>
                             <constraint firstItem="jbu-rC-N1K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FTY-4D-TYu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JlR-fJ-jow" secondAttribute="trailing" constant="30" id="FjW-il-HiX"/>
                             <constraint firstItem="jbu-rC-N1K" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Iep-Tg-aVH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UGh-xb-fQk" secondAttribute="bottom" constant="30" id="Z7n-EK-OG6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5wN-t2-WSz" secondAttribute="trailing" constant="30" id="KA4-r6-YnM"/>
                             <constraint firstItem="JlR-fJ-jow" firstAttribute="top" secondItem="jbu-rC-N1K" secondAttribute="bottom" constant="30" id="enC-oW-Ugv"/>
                             <constraint firstItem="UGh-xb-fQk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="hez-ya-ufZ"/>
                             <constraint firstItem="UGh-xb-fQk" firstAttribute="top" secondItem="JlR-fJ-jow" secondAttribute="bottom" constant="30" id="jN8-Fn-YIG"/>
+                            <constraint firstItem="5wN-t2-WSz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="kua-FS-8gD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UGh-xb-fQk" secondAttribute="trailing" constant="30" id="rT0-Io-VbW"/>
                             <constraint firstItem="UGh-xb-fQk" firstAttribute="top" secondItem="JlR-fJ-jow" secondAttribute="bottom" constant="30" id="vmr-jZ-QKJ"/>
                         </constraints>
@@ -104,11 +115,22 @@
                                     <segue destination="Lfe-RJ-s2S" kind="unwind" identifier="toFirstScreen" unwindAction="unwindToFirstScreen:" id="ZX0-hy-HIC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvI-k8-c5J">
+                                <rect key="frame" x="30" y="620" width="330" height="34"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Сохранить с помощью делегата"/>
+                                <connections>
+                                    <action selector="saveDataWithDelegate:" destination="3Xa-tL-Isa" eventType="touchUpInside" id="bqx-jI-xm4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aSY-fh-3bl"/>
                         <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="UkQ-15-vrH" firstAttribute="top" secondItem="hxw-2I-wtU" secondAttribute="bottom" constant="52" id="5fL-pw-SXs"/>
+                            <constraint firstItem="aSY-fh-3bl" firstAttribute="trailing" secondItem="fvI-k8-c5J" secondAttribute="trailing" constant="30" id="Hz8-Qa-U0n"/>
+                            <constraint firstItem="fvI-k8-c5J" firstAttribute="top" secondItem="Czb-0x-oEk" secondAttribute="bottom" constant="30" id="K0v-Qj-GLE"/>
                             <constraint firstItem="Czb-0x-oEk" firstAttribute="leading" secondItem="aSY-fh-3bl" secondAttribute="leading" constant="30" id="XfZ-lz-AkL"/>
                             <constraint firstItem="hxw-2I-wtU" firstAttribute="centerX" secondItem="xNP-h8-JY2" secondAttribute="centerX" id="YnA-5i-mC0"/>
                             <constraint firstItem="UkQ-15-vrH" firstAttribute="leading" secondItem="aSY-fh-3bl" secondAttribute="leading" constant="52" id="ZBX-DL-ovO"/>
@@ -117,6 +139,7 @@
                             <constraint firstItem="hxw-2I-wtU" firstAttribute="leading" secondItem="aSY-fh-3bl" secondAttribute="leading" constant="30" id="fp1-B1-qP4"/>
                             <constraint firstItem="aSY-fh-3bl" firstAttribute="trailing" secondItem="UkQ-15-vrH" secondAttribute="trailing" constant="49" id="jEZ-d1-0ls"/>
                             <constraint firstItem="Czb-0x-oEk" firstAttribute="top" secondItem="UkQ-15-vrH" secondAttribute="bottom" constant="30" id="pK2-Mc-LWn"/>
+                            <constraint firstItem="fvI-k8-c5J" firstAttribute="leading" secondItem="aSY-fh-3bl" secondAttribute="leading" constant="30" id="sty-iM-FBI"/>
                             <constraint firstItem="aSY-fh-3bl" firstAttribute="trailing" secondItem="hxw-2I-wtU" secondAttribute="trailing" constant="30" id="xyx-r6-8j9"/>
                         </constraints>
                     </view>

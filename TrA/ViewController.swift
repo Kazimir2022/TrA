@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, DataUpdateProtocol{
     var updatedData: String = "Test data"
     @IBOutlet var dataLabel: UILabel!
     override func viewDidLoad() {
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         dataLabel.text = updatedData
     }
 
-    @IBAction func editDataWithDelegate(_ sender: UIButton) {
+    @IBAction func editDataWithProperty(_ sender: UIButton) {
         // получаем вью контроллер
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         // получаем сцену второго вьюконтроллера и преобразуем ее
@@ -36,6 +36,20 @@ class ViewController: UIViewController {
         
 
         // добавляем в экран в стэк
+        self.navigationController?.pushViewController(editScreen, animated: true)
+    }
+    @IBAction func editDataWithDelegate(_ sender: UIButton) {
+        // получаем вью контроллер
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let editScreen = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+
+        // передаем данные
+        editScreen.updatingData = dataLabel.text ?? ""
+        
+        // устанавливаем делегат 
+        editScreen.handleUpdatedDataDelegate = self
+
+        // открываем следующий экран
         self.navigationController?.pushViewController(editScreen, animated: true)
     }
     
@@ -59,6 +73,17 @@ class ViewController: UIViewController {
         // У контроллера назначения (тип SecondViewController) изменяем текстовое свойство
         destinationController.updatingData = dataLabel.text ?? ""
     }
+    
+    
+    func onDataUpdate(data: String) {
+        updatedData = data // изменить значение свойства
+        updateLabel(withText: data)// вызов функции измен зн текстовой метки сцены А
+    }
+    
+    
+    
+    
+    
     
     @IBAction func unwindToFirstScreen(_ segue: UIStoryboardSegue) {}//
     

@@ -12,6 +12,9 @@ class SecondViewController: UIViewController {
     @IBOutlet var dataTextField: UITextField!
     // изменяемое значение
     var updatingData: String = "Test" //label сцены 1
+    
+    var handleUpdatedDataDelegate: DataUpdateProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,7 +32,16 @@ class SecondViewController: UIViewController {
             (viewController as? ViewController)?.updatedData = dataTextField.text ?? ""
         }
     }
-    
+    // Переход от Б к А
+    // Передача данных с помощью делегата
+    @IBAction func saveDataWithDelegate (_ sender: UIButton) {
+        // получаем обновленные данные. Присваиваем значение текстового поля константе
+        let updatedData = dataTextField.text ?? ""
+        // вызваем метод делегата, передаем ему знач константы
+        handleUpdatedDataDelegate?.onDataUpdate(data: updatedData)
+        // возвращаемся на предыдущий экран
+        navigationController?.popViewController(animated: true)
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // определяем идентификатор segue
         switch segue.identifier {
