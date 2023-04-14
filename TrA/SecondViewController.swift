@@ -14,6 +14,8 @@ class SecondViewController: UIViewController {
     var updatingData: String = "Test" //label сцены 1
     
     var handleUpdatedDataDelegate: DataUpdateProtocol?
+    // замыкание
+    var completionHandler: ((String) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,17 @@ class SecondViewController: UIViewController {
         updateTextFieldData(withText: updatingData)
     }
     
+    @IBAction func saveDataWithClosure(_ sender: Any) {
+        
+        // получаем обновленные данные из текстового поля
+        let updatedData = dataTextField.text ?? ""
+        // вызваем замыкание
+        completionHandler?(updatedData)
+        // возвращаемся на предыдущий экран
+        navigationController?.popViewController(animated: true)
+        
+        
+    }
     @IBAction func saveDataWithProperty(_ sender: UIButton) {
         self.navigationController?.viewControllers.forEach{ viewController in
             (viewController as? ViewController)?.updatedData = dataTextField.text ?? ""

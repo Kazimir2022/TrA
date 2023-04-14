@@ -24,6 +24,28 @@ class ViewController: UIViewController, DataUpdateProtocol{
         dataLabel.text = updatedData
     }
 
+    @IBAction func editDataWithClosure(_ sender: Any) {
+        
+        // получаем вью контроллер
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let editScreen = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+
+        // передаем данные
+        editScreen.updatingData = dataLabel.text ?? "" // устаналиваем начальное значение
+        
+        // устанавливаем текущий класс в качестве делегата
+        editScreen.completionHandler = { [unowned self] updatedValue in
+                //var completionHandler: ((String) -> Void)?
+            updatedData = updatedValue // т екстовое свойтсво принимает значение стринг
+            updateLabel(withText: updatedValue)// обновляем лейбл
+        }
+
+        // открываем следующий экран
+        self.navigationController?.pushViewController(editScreen, animated: true)
+        
+        
+        
+    }
     @IBAction func editDataWithProperty(_ sender: UIButton) {
         // получаем вью контроллер
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

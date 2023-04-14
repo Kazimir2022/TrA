@@ -54,13 +54,24 @@
                                     <action selector="editDataWithDelegate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZFa-dd-9UE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4D-IB-cYc">
+                                <rect key="frame" x="30" y="663" width="330" height="34"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Обновить с помощью замыкания"/>
+                                <connections>
+                                    <action selector="editDataWithClosure:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CA9-L2-FyY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.94391936188811187" green="0.46000000000000002" blue="0.92021197552447542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="JlR-fJ-jow" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="3fJ-DU-53E"/>
                             <constraint firstItem="5wN-t2-WSz" firstAttribute="top" secondItem="UGh-xb-fQk" secondAttribute="bottom" constant="30" id="B4h-0M-ulj"/>
+                            <constraint firstItem="n4D-IB-cYc" firstAttribute="top" secondItem="5wN-t2-WSz" secondAttribute="bottom" constant="30" id="D9p-W7-sS4"/>
                             <constraint firstItem="jbu-rC-N1K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FTY-4D-TYu"/>
+                            <constraint firstItem="n4D-IB-cYc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Fef-f9-3mW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JlR-fJ-jow" secondAttribute="trailing" constant="30" id="FjW-il-HiX"/>
                             <constraint firstItem="jbu-rC-N1K" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Iep-Tg-aVH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5wN-t2-WSz" secondAttribute="trailing" constant="30" id="KA4-r6-YnM"/>
@@ -69,6 +80,7 @@
                             <constraint firstItem="UGh-xb-fQk" firstAttribute="top" secondItem="JlR-fJ-jow" secondAttribute="bottom" constant="30" id="jN8-Fn-YIG"/>
                             <constraint firstItem="5wN-t2-WSz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="kua-FS-8gD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UGh-xb-fQk" secondAttribute="trailing" constant="30" id="rT0-Io-VbW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n4D-IB-cYc" secondAttribute="trailing" constant="30" id="rWT-jH-gzL"/>
                             <constraint firstItem="UGh-xb-fQk" firstAttribute="top" secondItem="JlR-fJ-jow" secondAttribute="bottom" constant="30" id="vmr-jZ-QKJ"/>
                         </constraints>
                     </view>
@@ -122,6 +134,16 @@
                                 <state key="normal" title="Сохранить с помощью делегата"/>
                                 <connections>
                                     <action selector="saveDataWithDelegate:" destination="3Xa-tL-Isa" eventType="touchUpInside" id="bqx-jI-xm4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nND-r7-LgE">
+                                <rect key="frame" x="47" y="681" width="297" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Сохранить с помощью замыкания"/>
+                                <connections>
+                                    <action selector="saveDataWithClosure:" destination="3Xa-tL-Isa" eventType="touchUpInside" id="kRn-Wa-hNA"/>
                                 </connections>
                             </button>
                         </subviews>
